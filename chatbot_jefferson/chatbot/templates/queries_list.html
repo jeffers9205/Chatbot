@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Consultas</title>
+    <link rel="stylesheet" href="{% static 'chatbot/css/queries_list.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Consultas</h1>
+        <a class="add-button" href="{% url 'queries_add' %}">Agregar Consulta</a>
+        <a class="add-button" href="/admin/">Regresar al Panel de Administración</a>
+        <table>
+            <thead>
+                <tr>
+                    <th>Pregunta</th>
+                    <th>Respuesta</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for question in queries %}
+                <tr>
+                    <td>{{ question.pregunta }}</td>
+                    <td>{{ question.respuesta }}</td>
+                    <td class="actions">
+                        <a class="edit-button" href="{% url 'queries_update' question.id %}">Editar</a>
+                        <form action="{% url 'queries_delete' question.id %}" method="post" class="delete-form">
+                            {% csrf_token %}
+                            <button type="submit" class="delete-button">Eliminar</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

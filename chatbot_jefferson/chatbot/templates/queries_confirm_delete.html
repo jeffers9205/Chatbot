@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmar Eliminación</title>
+    <link rel="stylesheet" href="{% static 'chatbot/css/confirm_delete.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Confirmar Eliminación</h1>
+        <p>¿Estás seguro de que deseas eliminar la pregunta "{{ question.pregunta }}"?</p>
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" class="delete-button">Eliminar</button>
+            <a href="{% url 'queries_list' %}" class="cancel-button">Cancelar</a>
+        </form>
+    </div>
+</body>
+</html>

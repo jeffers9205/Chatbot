@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('../images/travel_background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 20px;
+    color: #ffffff;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+    background-image: url('https://i0.wp.com/crie.cr/wp-content/uploads/2023/11/Costa-Rica-pros-and-cons.jpg?w=1344&ssl=1');
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.add-button {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.add-button:hover {
+    background-color: #45a049;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #dddddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #3d7b4d;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.edit-button, .delete-button {
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.edit-button:hover {
+    background-color: #007BB5;
+}
+
+.delete-button {
+    background-color: #f44336;
+}
+
+.delete-button:hover {
+    background-color: #da190b;
+}
+
+.delete-form {
+    display: inline;
+}

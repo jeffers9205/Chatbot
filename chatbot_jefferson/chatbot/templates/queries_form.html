@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if form.instance.pk %}Actualizar Consulta{% else %}Agregar Consulta{% endif %}</title>
+    <link rel="stylesheet" href="{% static 'chatbot/css/queries_form.css' %}">
+</head>
+<body>
+    <h1>{% if form.instance.pk %}Actualizar Consulta{% else %}Agregar Consulta{% endif %}</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Guardar</button>
+    </form>
+</body>
+</html>

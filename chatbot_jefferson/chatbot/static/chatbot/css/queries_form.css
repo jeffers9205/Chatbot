@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 20px;
+    color: #fff;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+}
+form {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    background-image: url('https://i0.wp.com/crie.cr/wp-content/uploads/2023/11/Costa-Rica-pros-and-cons.jpg?w=1344&ssl=1');
+}
+form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+form button:hover {
+    background-color: #45a049;
+}
+form p {
+    margin-bottom: 15px;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+.form-group input[type="text"], 
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+}
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}

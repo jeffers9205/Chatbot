@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agencia de Viajes Costa Rica</title>
+    <link rel="stylesheet" href="{% static 'chatbot/css/chatbot.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Bienvenido a nuestra Agencia de Viajes Costa Rica</h1>
+        <p>Descubre la belleza natural de Costa Rica con nuestras increíbles ofertas de viaje. Desde playas paradisíacas
+            hasta aventuras en la selva tropical, tenemos todo lo que necesitas para una experiencia inolvidable.</p>
+        <div id="chat-container">
+            <div id="minimize-button" onclick="toggleChat()">-</div>
+            <div id="chat-messages"></div>
+            <form id="chat-form" method="post">
+                {% csrf_token %}
+                <input type="text" id="user-input" placeholder="Escribe tu mensaje...">
+                <button id="send-button" type="submit">Enviar</button>
+            </form>
+        </div>
+        <div class="back-button">
+            <a href="/admin/">Regresar al Panel de Administración</a>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="{% static 'chatbot/js/chatbot.js' %}"></script>
+</body>
+</html>

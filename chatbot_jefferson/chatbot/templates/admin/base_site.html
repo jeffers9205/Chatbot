@@ -1,0 +1,10 @@
+{% extends 'admin/base_site.html' %}
+{% load i18n %} 
+{% block title %}{{ title }}{% endblock %}
+{% block branding %}
+<h1 id="site-name">{% trans 'Mi Panel de Administración de ChatBot' %}</h1>
+{% endblock %}
+{% block nav-global %}
+    <a href="{% url 'queries_list' %}" class="nav-global-view_site">{% trans 'Queries' %}</a>
+    <a href="{% url 'chat' %}" class="nav-global-view_site">{% trans 'Chat Bot' %}</a>
+{% endblock %}
